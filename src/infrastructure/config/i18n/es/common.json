@@ -1,0 +1,40 @@
+{
+  "errors": {
+    "notFound": "Recurso no encontrado",
+    "unauthorized": "Acceso no autorizado",
+    "forbidden": "Acceso prohibido",
+    "validation": "Error de validación",
+    "conflict": "El recurso ya existe",
+    "internal": "Error interno del servidor"
+  },
+  "auth": {
+    "loginSuccess": "Inicio de sesión exitoso",
+    "logoutSuccess": "Cierre de sesión exitoso",
+    "registrationSuccess": "Registro exitoso",
+    "invalidCredentials": "Email o contraseña inválidos",
+    "userExists": "Ya existe un usuario con este email",
+    "accountInactive": "La cuenta está inactiva"
+  },
+  "posts": {
+    "created": "Anuncio creado exitosamente",
+    "updated": "Anuncio actualizado exitosamente",
+    "deleted": "Anuncio eliminado exitosamente",
+    "approved": "Anuncio aprobado",
+    "rejected": "Anuncio rechazado",
+    "pending": "El anuncio está pendiente de aprobación",
+    "notFound": "Anuncio no encontrado",
+    "cannotEdit": "Solo puedes editar tus propios anuncios"
+  },
+  "reports": {
+    "created": "Reporte enviado exitosamente",
+    "reviewed": "Reporte revisado",
+    "resolved": "Reporte resuelto",
+    "alreadyReported": "Ya has reportado este anuncio",
+    "cannotReportOwn": "No puedes reportar tu propio anuncio"
+  },
+  "notifications": {
+    "postApproved": "Tu anuncio ha sido aprobado",
+    "postRejected": "Tu anuncio ha sido rechazado",
+    "reportReceived": "Se ha recibido un reporte para tu anuncio"
+  }
+} 

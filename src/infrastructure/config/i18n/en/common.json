@@ -1,0 +1,40 @@
+{
+  "errors": {
+    "notFound": "Resource not found",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden",
+    "validation": "Validation error",
+    "conflict": "Resource already exists",
+    "internal": "Internal server error"
+  },
+  "auth": {
+    "loginSuccess": "Login successful",
+    "logoutSuccess": "Logout successful",
+    "registrationSuccess": "Registration successful",
+    "invalidCredentials": "Invalid email or password",
+    "userExists": "User with this email already exists",
+    "accountInactive": "Account is inactive"
+  },
+  "posts": {
+    "created": "Post created successfully",
+    "updated": "Post updated successfully",
+    "deleted": "Post deleted successfully",
+    "approved": "Post approved",
+    "rejected": "Post rejected",
+    "pending": "Post is pending approval",
+    "notFound": "Post not found",
+    "cannotEdit": "You can only edit your own posts"
+  },
+  "reports": {
+    "created": "Report submitted successfully",
+    "reviewed": "Report reviewed",
+    "resolved": "Report resolved",
+    "alreadyReported": "You have already reported this post",
+    "cannotReportOwn": "You cannot report your own post"
+  },
+  "notifications": {
+    "postApproved": "Your post has been approved",
+    "postRejected": "Your post has been rejected",
+    "reportReceived": "A report has been received for your post"
+  }
+} 
