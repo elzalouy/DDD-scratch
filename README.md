@@ -126,17 +126,12 @@ npm install
 2. **Environment Configuration**
 ```bash
 # Copy environment template
-cp .env.example .env
+cp env.example .env
+# OR use environment-specific template
+cp env.development .env
 
-# Configure your environment variables
-DATABASE_HOST=localhost
-DATABASE_PORT=5432
-DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=password
-DATABASE_NAME=classified_ads
-JWT_SECRET=your-super-secret-jwt-key
-REDIS_HOST=localhost
-REDIS_PORT=6379
+# For complete configuration guide, see:
+# docs/implementation/environment-variables.md
 ```
 
 3. **Database Setup**
@@ -254,29 +249,16 @@ Every action is logged with:
 
 ### Environment Variables
 
-```env
-# Database
-DATABASE_HOST=localhost
-DATABASE_PORT=5432
-DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=password
-DATABASE_NAME=classified_ads
+For complete environment configuration including all available variables, security best practices, and environment-specific setups, see:
 
-# Authentication
-JWT_SECRET=your-jwt-secret
-JWT_EXPIRES_IN=7d
+- **[Environment Variables Guide](docs/implementation/environment-variables.md)** - Complete configuration reference
+- **[Environment Security Guide](docs/implementation/environment-security.md)** - Security best practices
 
-# Redis (for queues)
-REDIS_HOST=localhost
-REDIS_PORT=6379
-
-# Application
-PORT=3000
-NODE_ENV=development
-
-# Admin Account
-ADMIN_EMAIL=admin@example.com
-ADMIN_PASSWORD=admin123
+Quick setup:
+```bash
+# Copy template and configure
+cp env.development .env
+# Edit .env with your values
 ```
 
 ## 🚀 Deployment
