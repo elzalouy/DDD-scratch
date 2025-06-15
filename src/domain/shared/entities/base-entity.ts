@@ -10,7 +10,7 @@ export abstract class BaseEntity<T extends BaseId> {
   protected readonly _id: T;
   protected readonly _createdAt: Date;
   protected _updatedAt: Date;
-  private _domainEvents: DomainEvent[] = [];
+  private _domainEvents: any[] = [];
 
   constructor(id: T) {
     this._id = id;
@@ -34,8 +34,12 @@ export abstract class BaseEntity<T extends BaseId> {
     return [...this._domainEvents];
   }
 
-  protected addDomainEvent(event: DomainEvent): void {
+  protected addDomainEvent(event: any): void {
     this._domainEvents.push(event);
+  }
+
+  public getDomainEvents(): any[] {
+    return [...this._domainEvents];
   }
 
   public clearDomainEvents(): void {
@@ -48,5 +52,11 @@ export abstract class BaseEntity<T extends BaseId> {
 
   public equals(entity: BaseEntity<T>): boolean {
     return this._id.equals(entity._id);
+  }
+
+  public toJSON(): any {
+    return {
+      id: this._id.value,
+    };
   }
 } 

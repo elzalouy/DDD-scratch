@@ -1,10 +1,17 @@
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { Inject } from '@nestjs/common';
 import { CreatePostCommand } from './create-post.command';
-import { Post } from '@app/domain/posts/entities/post.entity';
-import { UserId, CategoryId, LocationId } from '@app/domain/shared/value-objects/base-id.vo';
-import { Price } from '@app/domain/posts/value-objects/price.vo';
-import { IPostRepository, POST_REPOSITORY_TOKEN } from '@app/domain/posts/repositories/post.repository.interface';
+import { Post } from '../../../../domain/posts/entities/post.entity';
+import {
+  UserId,
+  CategoryId,
+  LocationId,
+} from '../../../../domain/shared/value-objects/base-id.vo';
+import { Price } from '../../../../domain/posts/value-objects/price.vo';
+import {
+  IPostRepository,
+  POST_REPOSITORY_TOKEN,
+} from '../../../../domain/posts/repositories/post.repository.interface';
 
 @CommandHandler(CreatePostCommand)
 export class CreatePostHandler implements ICommandHandler<CreatePostCommand> {

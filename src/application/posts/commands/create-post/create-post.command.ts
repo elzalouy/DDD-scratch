@@ -1,4 +1,4 @@
-import { PostType } from '@app/domain/posts/entities/post.entity';
+import { PostType } from '../../../../domain/posts/entities/post.entity';
 
 export class CreatePostCommand {
   constructor(
@@ -9,7 +9,11 @@ export class CreatePostCommand {
     public readonly categoryId: string,
     public readonly locationId: string,
     public readonly price?: { amount: number; currency: string },
-    public readonly images?: Array<{ url: string; caption?: string; order: number }>,
+    public readonly images?: Array<{
+      url: string;
+      caption?: string;
+      order: number;
+    }>,
     public readonly metadata?: Record<string, any>,
   ) {}
 }

@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsString, IsEnum, IsOptional, IsNumber, IsArray, ValidateNested, IsObject, MinLength, MaxLength, Min } from 'class-validator';
 import { Type } from 'class-transformer';
-import { PostType } from '@app/domain/posts/entities/post.entity';
+import { PostType } from '../../../../domain/posts/entities/post.entity';
 
 export class PriceDto {
   @ApiProperty({ description: 'Price amount', example: 100.50 })

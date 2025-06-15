@@ -1,13 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, SelectQueryBuilder } from 'typeorm';
-import { Post } from '@app/domain/posts/entities/post.entity';
-import { PostId, UserId, CategoryId, LocationId } from '@app/domain/shared/value-objects/base-id.vo';
-import { 
-  IPostRepository, 
-  PostSearchFilters, 
-  PostSearchResult 
-} from '@app/domain/posts/repositories/post.repository.interface';
+import { Post } from '../../../../domain/posts/entities/post.entity';
+import {
+  PostId,
+  UserId,
+  CategoryId,
+  LocationId,
+} from '../../../../domain/shared/value-objects/base-id.vo';
+import {
+  IPostRepository,
+  PostSearchFilters,
+  PostSearchResult,
+} from '../../../../domain/posts/repositories/post.repository.interface';
 import { PostTypeormEntity } from '../entities/post.typeorm-entity';
 
 @Injectable()
@@ -193,4 +198,4 @@ export class PostRepository implements IPostRepository {
       entity.metadata,
     );
   }
-} 
+}

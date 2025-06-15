@@ -1,5 +1,5 @@
 import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn, Index } from 'typeorm';
-import { PostType } from '@app/domain/posts/entities/post.entity';
+import { PostType } from '../../../../domain/posts/entities/post.entity';
 
 @Entity('posts')
 @Index(['categoryId', 'locationId', 'status'])
